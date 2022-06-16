@@ -3,8 +3,8 @@ let inputnumero = document.getElementById('numero');
 let res = document.getElementById('res');
 
 function start() {    
-    let qtDeSequencia = Number(inputsequencia.value) //Insira AQUI a quantidade  de sequência a ser realizado.
-    let numero = Number(inputnumero.value); //Insira AQUI o número para checar na sequência.
+    let qtDeSequencia = Number(inputsequencia.value)
+    let numero = Number(inputnumero.value); 
     
     let checknumeros = checknumerosint(qtDeSequencia, numero);
     res.innerHTML = '';
@@ -29,6 +29,7 @@ function start() {
     }   
 }
 
+//Checar se o número inserido é inteiro e adicionar a sequência em Array.
 function checknumerosint(sequencia,numero) {
     
     if(sequencia % 1) return `[ERRO]. Insira um valor inteiro na sequência!`
