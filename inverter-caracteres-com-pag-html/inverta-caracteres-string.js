@@ -10,9 +10,15 @@ function iniciar(){
     string.focus();  
 }
 function separarCaracteres(frase) {
-    res.innerHTML =`A string a ser invertida é: ${frase}`
-    let newfrase = frase.split(''); //Separar as palavras em letras
-    return newfrase;
+    if(frase.length >= 3) {
+        res.innerHTML =`A string a ser invertida é: ${frase}`
+        let newfrase = frase.split(''); //Separar as palavras em letras
+        return newfrase;
+    } else {
+        res.innerHTML = `[ERRO]. Adicione uma frase acima com 3 caracteres ou mais!`
+    }
+
+    
 }
 function inverterCaracteres(separar) {
     let indiceMax = separar.length;
